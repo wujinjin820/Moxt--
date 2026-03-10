@@ -1143,7 +1143,7 @@
       </div>
     </div><!-- /头图02 -->
     <script>
-    (function(){var m={'deco-left':'hero-deco-left','character':'hero-character','deco-bottom':'hero-deco-bottom','floating-card':'hero-floating-card'};var d={'deco-left':{left:52,top:-28},'character':{left:358,top:8},'deco-bottom':{left:95,top:368},'floating-card':{left:197,top:395}};var p;try{var s=localStorage.getItem('moxt-hero-ip-positions');p=s?JSON.parse(s):d;}catch(e){p=d;}Object.keys(p).forEach(function(k){var el=document.getElementById(m[k]);if(el&&p[k]&&typeof p[k].left==='number'&&typeof p[k].top==='number'){el.style.left=p[k].left+'px';el.style.top=p[k].top+'px';el.style.right='auto';el.style.bottom='auto';}});})();
+    (function(){var m={'deco-left':'hero-deco-left','character':'hero-character','deco-bottom':'hero-deco-bottom','floating-card':'hero-floating-card'};var p;try{var s=localStorage.getItem('moxt-hero-ip-positions');if(!s)return;p=JSON.parse(s);}catch(e){return;}Object.keys(p).forEach(function(k){var el=document.getElementById(m[k]);if(el&&p[k]&&typeof p[k].left==='number'&&typeof p[k].top==='number'){el.style.left=p[k].left+'px';el.style.top=p[k].top+'px';el.style.right='auto';el.style.bottom='auto';}});})();
     </script>
 
     <!-- Selling Points Section - Vertical stack with scroll reveal -->
