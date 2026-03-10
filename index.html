@@ -69,7 +69,7 @@
     }
 
     p {
-      color: var(--gray-500);
+      color: var(--gray-600);
     }
 
     img {
@@ -203,41 +203,20 @@
       transform: translateY(0);
     }
 
-    /* Magic card hover — 统一卡片悬浮 */
+    /* Magic card — 不可点击，无 hover */
     .magic-card-hover {
-      transition: transform 0.4s var(--ease-out-quart),
-                  box-shadow 0.4s var(--ease-out-quart);
-    }
-    .magic-card-hover:hover {
-      transform: translateY(-4px) scale(1.005);
-      box-shadow: 0 16px 48px rgba(0,0,0,0.09), 0 2px 8px rgba(0,0,0,0.04);
+      transition: none;
     }
 
-    /* use-case card hover — 聚焦效果 */
+    /* use-case card — 不可点击，无 hover */
     .use-case-card {
-      transition: transform 0.3s var(--ease-out-quart),
-                  box-shadow 0.3s var(--ease-out-quart),
-                  border-color 0.3s ease;
-    }
-    .use-case-card:hover {
-      transform: translateY(-3px) scale(1.02);
-      box-shadow: 0 8px 28px rgba(47,184,114,0.12), 0 2px 8px rgba(0,0,0,0.05);
-      border-color: rgba(47,184,114,0.22) !important;
-    }
-    .use-case-card:hover .use-case-icon {
-      background: rgba(47,184,114,0.08) !important;
-      transform: scale(1.08) rotate(-3deg);
+      transition: none;
     }
     .use-case-icon {
       transition: background 0.3s ease, transform 0.3s var(--ease-spring);
     }
 
-    /* comparison-card hover */
-    .comparison-card.visible:hover {
-      transform: translateY(-4px) scale(1.015);
-      box-shadow: 0 12px 36px rgba(0,0,0,0.09) !important;
-      z-index: 2;
-    }
+    /* comparison-card — 不可点击，无 hover */
 
     /* section 分隔过渡层 */
     .section-fade-top {
@@ -295,7 +274,7 @@
       margin-bottom: 20px;
     }
     .pricing-headline {
-      font-size: 48px;
+      font-size: 52px;
       font-weight: 700;
       color: var(--gray-700);
       line-height: 1.02;
@@ -553,25 +532,11 @@
       background: rgba(255, 255, 255, 0.86) !important;
       backdrop-filter: blur(24px) saturate(180%) !important;
       -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
-      border-bottom-color: rgba(0, 0, 0, 0.055) !important;
-      box-shadow: 0 1px 0 rgba(0,0,0,0.04), 0 6px 20px rgba(0,0,0,0.05) !important;
+      border-bottom-color: transparent !important;
+      box-shadow: none !important;
     }
 
-    /* ── Deliverables category card icon 动效 ── */
-    .deliverable-card {
-      transition: transform 0.38s var(--ease-out-quart),
-                  box-shadow 0.38s var(--ease-out-quart);
-    }
-    .deliverable-card:hover {
-      transform: translateY(-5px) scale(1.02);
-      box-shadow: 0 14px 40px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.04);
-    }
-    .deliverable-card .deliv-icon {
-      transition: transform 0.4s var(--ease-spring);
-    }
-    .deliverable-card:hover .deliv-icon {
-      transform: scale(1.12) rotate(-6deg);
-    }
+    /* ── Deliverables category card — 不可点击，无 hover ── */
 
     /* ── Brand IP items hover ── */
     .brand-ip-item img {
@@ -675,16 +640,7 @@
       overflow: hidden;
     }
     .callout-quote::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(90deg, rgba(47,184,114,0.06) 0%, transparent 60%);
-      opacity: 0;
-      transition: opacity 0.6s var(--ease-out-expo);
-    }
-    .magic-block.visible .callout-quote::before {
-      opacity: 1;
-      transition-delay: 0.55s;
+      display: none;
     }
 
     /* 插图图片本身缓入 */
@@ -833,11 +789,11 @@
     <nav id="main-nav" style="position:fixed;top:0;left:0;right:0;z-index:50;padding:0 40px;height:64px;display:flex;align-items:center;justify-content:space-between;background:transparent;border-bottom:1px solid transparent;transition:background 0.25s ease-out, backdrop-filter 0.25s ease-out, -webkit-backdrop-filter 0.25s ease-out, border-color 0.25s ease-out, box-shadow 0.25s ease-out">
       <img src="assets/images/moxt-logo.svg" alt="Moxt" style="height:28px;width:auto" />
       <div style="display:flex;align-items:center;gap:28px">
-        <a href="#pricing" style="font-size:14px;font-weight:500;color:var(--gray-700);transition:color 0.15s,background 0.15s,border-radius 0.15s;padding:5px 10px;border-radius:var(--radius-md);text-decoration:none;" class="nav-link">Pricing</a>
-        <a href="#" style="font-size:14px;font-weight:500;color:var(--gray-700);transition:color 0.15s,background 0.15s,border-radius 0.15s;padding:5px 10px;border-radius:var(--radius-md);text-decoration:none;" class="nav-link">Blog</a>
         <a href="#" style="font-size:14px;font-weight:500;color:var(--gray-700);transition:color 0.15s,background 0.15s,border-radius 0.15s;padding:5px 10px;border-radius:var(--radius-md);text-decoration:none;" class="nav-link">What's New</a>
+        <a href="#" style="font-size:14px;font-weight:500;color:var(--gray-700);transition:color 0.15s,background 0.15s,border-radius 0.15s;padding:5px 10px;border-radius:var(--radius-md);text-decoration:none;" class="nav-link">Blog</a>
+        <a href="#pricing" style="font-size:14px;font-weight:500;color:var(--gray-700);transition:color 0.15s,background 0.15s,border-radius 0.15s;padding:5px 10px;border-radius:var(--radius-md);text-decoration:none;" class="nav-link">Pricing</a>
       </div>
-      <a href="https://app.moxt.ai" target="_blank" rel="noopener noreferrer" class="btn-primary" tabindex="0" style="height:36px;padding:0 20px;font-size:14px;text-decoration:none;display:inline-flex;align-items:center">Get Started Free <span>→</span></a>
+      <a href="https://app.moxt.ai" target="_blank" rel="noopener noreferrer" class="btn-primary" tabindex="0" style="height:40px;padding:0 20px;font-size:14px;text-decoration:none;display:inline-flex;align-items:center">Get Started Free <span>→</span></a>
     </nav>
 
     <!-- ════════ 头图01 备用 · 切换时删除外层 display:none ════════ -->
@@ -856,12 +812,12 @@
         <div style="display:flex;align-items:center;gap:9px;margin-bottom:11px;">
           <div style="width:30px;height:30px;border-radius:var(--radius-sm);background:var(--primary-50);display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;">🔬</div>
           <div style="min-width:0;flex:1;">
-            <div style="font-size:11.5px;font-weight:700;color:var(--gray-700);">Research Agent</div>
+            <div style="font-size:11.5px;font-weight:700;color:var(--gray-600);">Research Agent</div>
             <div style="font-size:10.5px;color:var(--gray-600);">Active · 4 min left</div>
           </div>
           <div style="width:7px;height:7px;border-radius:50%;background:var(--primary-500);flex-shrink:0;animation:heroDotPulse 2s ease-in-out infinite;"></div>
         </div>
-        <div style="font-size:11.5px;color:var(--gray-700);margin-bottom:7px;font-weight:500;">Analyzing: Q4 Market</div>
+        <div style="font-size:11.5px;color:var(--gray-600);margin-bottom:7px;font-weight:500;">Analyzing: Q4 Market</div>
         <div style="height:5px;background:var(--gray-100);border-radius:3px;overflow:hidden;margin-bottom:6px;">
           <div style="width:72%;height:100%;background:linear-gradient(90deg,var(--primary-500),var(--primary-400));border-radius:3px;animation:heroProgressFill 1.4s .4s ease-out both;"></div>
         </div>
@@ -876,7 +832,7 @@
           </div>
           <span style="font-size:11.5px;font-weight:700;color:var(--primary-600);">Task complete</span>
         </div>
-        <div style="font-size:13px;font-weight:600;color:var(--gray-700);margin-bottom:3px;">Q4 Investor Update</div>
+        <div style="font-size:13px;font-weight:600;color:var(--gray-600);margin-bottom:3px;">Q4 Investor Update</div>
         <div style="font-size:10.5px;color:var(--gray-600);margin-bottom:12px;">Generated in 1m 42s · 28 pages</div>
         <div style="display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:600;color:var(--primary-500);">
           View Document
@@ -888,13 +844,13 @@
       <div class="hero-fc" style="left:3%;top:63%;animation:heroCard3Float 7s ease-in-out infinite 1.2s;">
         <div style="display:flex;align-items:center;gap:9px;margin-bottom:10px;">
           <div style="width:30px;height:30px;border-radius:var(--radius-sm);background:#FEF3C7;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;">📚</div>
-          <div style="font-size:11.5px;font-weight:700;color:var(--gray-700);">Context loaded</div>
+          <div style="font-size:11.5px;font-weight:700;color:var(--gray-600);">Context loaded</div>
         </div>
         <div style="font-size:10.5px;color:var(--gray-600);margin-bottom:8px;">3 files · 847 pages indexed</div>
         <div style="display:flex;gap:5px;flex-wrap:wrap;">
-          <span style="font-size:10px;padding:2px 8px;background:var(--gray-100);border-radius:9999px;color:var(--gray-700);font-weight:500;">Brand guide</span>
-          <span style="font-size:10px;padding:2px 8px;background:var(--gray-100);border-radius:9999px;color:var(--gray-700);font-weight:500;">SOP</span>
-          <span style="font-size:10px;padding:2px 8px;background:var(--gray-100);border-radius:9999px;color:var(--gray-700);font-weight:500;">Wiki</span>
+          <span style="font-size:10px;padding:2px 8px;background:var(--gray-100);border-radius:9999px;color:var(--gray-600);font-weight:500;">Brand guide</span>
+          <span style="font-size:10px;padding:2px 8px;background:var(--gray-100);border-radius:9999px;color:var(--gray-600);font-weight:500;">SOP</span>
+          <span style="font-size:10px;padding:2px 8px;background:var(--gray-100);border-radius:9999px;color:var(--gray-600);font-weight:500;">Wiki</span>
         </div>
       </div>
 
@@ -903,12 +859,12 @@
         <div style="display:flex;align-items:center;gap:9px;margin-bottom:11px;">
           <div style="width:30px;height:30px;border-radius:var(--radius-sm);background:#EDE9FE;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;">✍️</div>
           <div style="flex:1;min-width:0;">
-            <div style="font-size:11.5px;font-weight:700;color:var(--gray-700);">Writer Agent</div>
+            <div style="font-size:11.5px;font-weight:700;color:var(--gray-600);">Writer Agent</div>
             <div style="font-size:10.5px;color:var(--gray-600);">Active · 2 min</div>
           </div>
           <div style="width:7px;height:7px;border-radius:50%;background:var(--primary-500);flex-shrink:0;animation:heroDotPulse 2s ease-in-out infinite .8s;"></div>
         </div>
-        <div style="font-size:11.5px;color:var(--gray-700);margin-bottom:7px;font-weight:500;">Drafting: Investor Pitch</div>
+        <div style="font-size:11.5px;color:var(--gray-600);margin-bottom:7px;font-weight:500;">Drafting: Investor Pitch</div>
         <div style="height:5px;background:var(--gray-100);border-radius:3px;overflow:hidden;margin-bottom:6px;">
           <div style="width:82%;height:100%;background:linear-gradient(90deg,#8B5CF6,#A78BFA);border-radius:3px;animation:heroProgressFill 1.6s .7s ease-out both;"></div>
         </div>
@@ -980,11 +936,11 @@
           <defs>
             <!-- 竖向虚线列 -->
             <pattern id="col-guide" x="0" y="0" width="120" height="100%" patternUnits="userSpaceOnUse">
-              <line x1="0" y1="0" x2="0" y2="10000" stroke="#2D2A26" stroke-width="0.9" stroke-dasharray="4 16" opacity="0.11"/>
+              <line x1="0" y1="0" x2="0" y2="10000" stroke="#B8A88A" stroke-width="0.9" stroke-dasharray="4 16" opacity="0.28"/>
             </pattern>
             <!-- 横向文字线 -->
             <pattern id="text-line" x="0" y="0" width="100%" height="52" patternUnits="userSpaceOnUse">
-              <line x1="0" y1="51" x2="10000" y2="51" stroke="#2D2A26" stroke-width="0.65" stroke-dasharray="18 9" opacity="0.07"/>
+              <line x1="0" y1="51" x2="10000" y2="51" stroke="#B8A88A" stroke-width="0.65" stroke-dasharray="18 9" opacity="0.18"/>
             </pattern>
           </defs>
 
@@ -993,55 +949,8 @@
           <!-- 文字行网格 -->
           <rect width="100%" height="100%" fill="url(#text-line)"/>
 
-          <!-- 左侧：悬浮文档卡片 -->
-          <g opacity="0.09" stroke="#2D2A26" stroke-width="1.15" fill="none">
-            <rect x="5.8%" y="13.2%" width="11%" height="15%" rx="4" fill="#FFFFFF" fill-opacity="0.08"/>
-            <rect x="5%" y="10.2%" width="11.8%" height="18%" rx="4"/>
-            <polyline points="14.4%,10.2% 16.8%,10.2% 16.8%,12.6%" />
-            <line x1="6.6%" y1="14.8%" x2="10.4%" y2="14.8%" stroke="#2FB872" stroke-width="1.6" stroke-linecap="round"/>
-            <line x1="6.6%" y1="17.8%" x2="15.1%" y2="17.8%" stroke-dasharray="3 4"/>
-            <line x1="6.6%" y1="20.7%" x2="14.2%" y2="20.7%" stroke-dasharray="3 4"/>
-            <line x1="6.6%" y1="23.6%" x2="13.5%" y2="23.6%" stroke-dasharray="3 4"/>
-            <line x1="6.6%" y1="26.2%" x2="11.8%" y2="26.2%" stroke-dasharray="3 4"/>
-          </g>
-          <g opacity="0.075" stroke="#2D2A26" stroke-width="1.05" fill="none">
-            <rect x="3%" y="54%" width="9%" height="13%" rx="4" fill="#FFFFFF" fill-opacity="0.08"/>
-            <rect x="4.2%" y="56.1%" width="2.2%" height="2.2%" rx="1.1" stroke="#2FB872" />
-            <line x1="7%" y1="57.2%" x2="10.2%" y2="57.2%" stroke-linecap="round"/>
-            <line x1="4.2%" y1="61%" x2="10.8%" y2="61%" stroke-dasharray="3 4"/>
-            <line x1="4.2%" y1="63.8%" x2="10.1%" y2="63.8%" stroke-dasharray="3 4"/>
-            <line x1="4.2%" y1="66.6%" x2="9.4%" y2="66.6%" stroke-dasharray="3 4"/>
-          </g>
-
-          <!-- 右侧：悬浮知识卡片 -->
-          <g opacity="0.09" stroke="#2D2A26" stroke-width="1.15" fill="none">
-            <rect x="83%" y="20%" width="12%" height="16%" rx="4" fill="#FFFFFF" fill-opacity="0.08"/>
-            <line x1="84.7%" y1="24.2%" x2="92.6%" y2="24.2%" stroke="#2FB872" stroke-width="1.6" stroke-linecap="round"/>
-            <circle cx="85.6%" cy="28.3%" r="0.45%" fill="#2FB872" fill-opacity="0.75" stroke="none"/>
-            <line x1="86.8%" y1="28.3%" x2="92.8%" y2="28.3%" stroke-dasharray="3 4"/>
-            <circle cx="85.6%" cy="31.3%" r="0.45%" fill="#2FB872" fill-opacity="0.55" stroke="none"/>
-            <line x1="86.8%" y1="31.3%" x2="91.6%" y2="31.3%" stroke-dasharray="3 4"/>
-            <circle cx="85.6%" cy="34.3%" r="0.45%" fill="#2FB872" fill-opacity="0.45" stroke="none"/>
-            <line x1="86.8%" y1="34.3%" x2="92.2%" y2="34.3%" stroke-dasharray="3 4"/>
-          </g>
-          <g opacity="0.07" stroke="#2D2A26" stroke-width="1.05" fill="none">
-            <rect x="86%" y="62%" width="10%" height="14%" rx="4" fill="#FFFFFF" fill-opacity="0.08"/>
-            <line x1="87.4%" y1="66.2%" x2="94.6%" y2="66.2%" stroke-linecap="round"/>
-            <line x1="87.4%" y1="69.4%" x2="94.6%" y2="69.4%" stroke-dasharray="3 4"/>
-            <line x1="87.4%" y1="72.4%" x2="92.8%" y2="72.4%" stroke-dasharray="3 4"/>
-            <rect x="87.4%" y="73.8%" width="3.1%" height="1.8%" rx="0.9" stroke="#2FB872"/>
-          </g>
-
-          <!-- 中部顶端：大文档幽灵 -->
-          <g opacity="0.06" stroke="#2D2A26" stroke-width="1.05" fill="none">
-            <rect x="38%" y="4%" width="22%" height="10%" rx="5" fill="#FFFFFF" fill-opacity="0.06"/>
-            <line x1="40%" y1="7.6%" x2="46.2%" y2="7.6%" stroke="#2FB872" stroke-width="1.5" stroke-linecap="round"/>
-            <line x1="40%" y1="10.2%" x2="58%" y2="10.2%" stroke-dasharray="4 7"/>
-            <line x1="40%" y1="12.3%" x2="52.6%" y2="12.3%" stroke-dasharray="4 7"/>
-          </g>
 
           <!-- 散点：随机小点缀 -->
-          <circle cx="28%"  cy="22%"  r="2.5" fill="#2FB872" opacity="0.28"/>
           <circle cx="72%"  cy="14%"  r="2"   fill="#2FB872" opacity="0.22"/>
           <circle cx="18%"  cy="68%"  r="1.8" fill="#2D2A26" opacity="0.12"/>
           <circle cx="91%"  cy="45%"  r="2.2" fill="#2FB872" opacity="0.2"/>
@@ -1056,7 +965,7 @@
         <div id="hero-copy-group" style="flex:1;min-width:min(340px,100%);">
 
           <!-- Badge -->
-          <div class="hero-badge hero-word visible" style="display:inline-flex;margin-bottom:28px;">
+          <div class="hero-badge hero-word visible" style="display:inline-flex;margin-bottom:16px;">
             <svg width="11" height="11" viewBox="0 0 16 16" fill="#04C462" style="flex-shrink:0;"><path d="M8 .25l1.99 5.26H16l-4.6 3.34 1.75 5.39L8 11.14l-5.15 3.1 1.75-5.4L.01 5.51H6.01L8 .25z"/></svg>
             Autonomous Workspace
           </div>
@@ -1065,20 +974,20 @@
           <div id="hero-title-group" style="display:inline-block;max-width:100%;overflow:visible;">
             <div style="display:inline-block;overflow:visible;">
               <!-- Headline -->
-              <h1 class="hero-word visible" style="font-family:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,sans-serif;font-size:72px;font-weight:700;line-height:1.15;letter-spacing:-0.03em;color:var(--gray-700);margin:0 0 28px;padding-bottom:18px;overflow:visible;">
+              <h1 class="hero-word visible" style="font-family:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,sans-serif;font-size:72px;font-weight:700;line-height:1.15;letter-spacing:-0.03em;color:var(--gray-700);margin:0 0 16px;padding-bottom:0;overflow:visible;">
                 The Workspace<br/>
                 for                 <span style="position:relative;display:inline-block;padding-bottom:20px;overflow:visible;" class="hero-ais-underline">
-                  <span style="font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-size:1em;font-weight:700;font-style:italic;color:#00E186;letter-spacing:0.02em;">AIs</span>
+                  <span style="font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-size:1em;font-weight:700;font-style:italic;color:#02DC82;letter-spacing:0.02em;">AIs</span>
                   <!-- 笔触下划线 -->
                   <svg aria-hidden="true" style="position:absolute;bottom:4px;left:-6px;width:calc(100% + 12px);height:18px;overflow:visible;" viewBox="0 0 100 12" preserveAspectRatio="none">
-                    <path d="M0 9.5 C5 9 15 7.5 35 7 C55 6.5 75 6.5 90 7.5 C95 8 99 9 100 9.5 C99 10.5 95 11.5 90 11 C75 10.5 55 10 35 10 C15 10 5 10.5 0 10.5 Z" fill="#00E186" opacity="0.75"/>
+                    <path d="M0 9.5 C5 9 15 7.5 35 7 C55 6.5 75 6.5 90 7.5 C95 8 99 9 100 9.5 C99 10.5 95 11.5 90 11 C75 10.5 55 10 35 10 C15 10 5 10.5 0 10.5 Z" fill="#02DC82" opacity="0.75"/>
                   </svg>
                 </span><span style="font-style:normal;color:#202624;">, and you.</span>
               </h1>
             </div>
             <!-- Subtitle：宽度与主标题一致，右边缘对齐 -->
             <div style="width:0;min-width:100%;">
-              <p id="hero-subtitle" class="animate-on-scroll visible" style="font-size:clamp(16px,1.2vw,19px);color:var(--gray-500);line-height:1.65;margin:0 0 34px;font-weight:400;">
+              <p id="hero-subtitle" class="animate-on-scroll visible" style="font-size:clamp(16px,1.2vw,19px);color:var(--gray-600);line-height:1.65;margin:0 0 34px;font-weight:400;">
                 The Autonomous Workspace, built for AI first. Your AI agents research, write, and build. You lead.
               </p>
             </div>
@@ -1113,6 +1022,15 @@
             </div>
           </div>
 
+          <!-- ④ 右上: 黄色星星装饰 -->
+          <div style="position:absolute;top:-80px;right:20px;z-index:5;pointer-events:none;">
+            <div aria-hidden="true" style="animation:heroDecoBreathe 4.5s ease-in-out infinite 0.5s;">
+              <svg width="36" height="36" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M50 4C54 36 64 46 96 50C64 54 54 64 50 96C46 64 36 54 4 50C36 46 46 36 50 4Z" fill="#F9D33D" stroke="#F9D33D" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+
           <!-- ③ 右下: 装饰插画 (组 14) -->
           <div id="hero-deco-bottom" style="position:absolute;bottom:-28px;left:12px;z-index:5;pointer-events:none;">
             <div aria-hidden="true" style="animation:heroDecoBreathe 5.5s ease-in-out infinite 0.8s;">
@@ -1129,7 +1047,7 @@
                 </div>
                 <span style="font-size:11px;font-weight:700;color:var(--primary-600);">Done in 1m 42s</span>
               </div>
-              <div style="font-size:13px;font-weight:600;color:var(--gray-700);">Q4 Pitch Deck</div>
+              <div style="font-size:13px;font-weight:600;color:var(--gray-600);">Q4 Pitch Deck</div>
               <div style="font-size:10.5px;color:var(--gray-600);">28 slides generated</div>
             </div>
           </div>
@@ -1152,7 +1070,7 @@
         <h2 class="animate-on-scroll" style="font-size:48px;font-weight:700;color:var(--gray-700);text-align:center;margin-bottom:64px;line-height:1.3">More Context. More Magic.</h2>
 
         <!-- Card 1 -->
-        <div class="magic-block delay-1" style="margin:72px 0">
+        <div class="magic-block delay-1" style="margin:56px 0">
           <div class="magic-card magic-card-hover" style="height:480px;background:#fff;border:var(--border-card);border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow-card)">
             <div class="magic-img" style="height:480px;display:flex;align-items:center;justify-content:center;padding:24px;box-sizing:border-box">
               <div class="magic-img-inner" style="width:100%;height:100%;transform:translateY(16px)">
@@ -1161,15 +1079,15 @@
             </div>
             <div class="magic-text" style="display:flex;flex-direction:column;justify-content:center;padding:24px 64px;overflow-y:auto;height:480px;background:#fff">
               <h3 class="magic-text-item" style="font-size:32px;font-weight:700;color:#0D0E10;line-height:1.4;margin:0 0 16px">No more "let me give you some background."</h3>
-              <p class="magic-text-item" style="font-size:16px;color:var(--gray-700);margin:0 0 20px;line-height:1.6;font-weight:700">More context changes everything.</p>
-              <p class="magic-text-item" style="font-size:16px;color:var(--gray-700);line-height:1.6;margin:0 0 20px">Your business docs, code logic, brand rules, process playbooks — bring them all into one place. Moxt converts everything into AI's native language. Once your AIs have real context, the magic kicks in: they get it right on the first try.</p>
+              <p class="magic-text-item" style="font-size:16px;color:var(--gray-600);margin:0 0 20px;line-height:1.6;font-weight:700">More context changes everything.</p>
+              <p class="magic-text-item" style="font-size:16px;color:var(--gray-600);line-height:1.6;margin:0 0 20px">Your business docs, code logic, brand rules, process playbooks — bring them all into one place. Moxt converts everything into AI's native language. Once your AIs have real context, the magic kicks in: they get it right on the first try.</p>
               <p class="magic-text-item callout-quote" style="background:#F5FAF8;border-left-color:#2FB872;color:var(--primary-700);">Feed AI in its native language — context — and watch the magic happen.</p>
             </div>
           </div>
         </div>
 
         <!-- Card 2 -->
-        <div class="magic-block delay-2" style="margin:72px 0">
+        <div class="magic-block delay-2" style="margin:56px 0">
           <div class="magic-card magic-card-hover" style="height:480px;background:#fff;border:var(--border-card);border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow-card);flex-direction:row-reverse">
             <div class="magic-img" style="height:480px;display:flex;align-items:center;justify-content:center;padding:24px;box-sizing:border-box">
               <div class="magic-img-inner" style="width:100%;height:100%;transform:translateY(16px)">
@@ -1178,15 +1096,15 @@
             </div>
             <div class="magic-text" style="display:flex;flex-direction:column;justify-content:center;padding:24px 64px;overflow-y:auto;height:480px;background:#fff">
               <h3 class="magic-text-item" style="font-size:32px;font-weight:700;color:#0D0E10;line-height:1.2;margin:0 0 16px">AIs that live here — autonomous and always growing.</h3>
-              <p class="magic-text-item" style="font-size:16px;color:var(--gray-700);margin:0 0 20px;line-height:1.6;font-weight:700">Friday 6 PM, close your laptop. Monday 8 AM, everything's done.</p>
-              <p class="magic-text-item" style="font-size:16px;color:var(--gray-700);line-height:1.6;margin:0 0 20px">Your AI team doesn't just run tasks — it learns your methods and gets sharper every week. Correct it once, it never makes the same mistake. The longer you use it, the less you need to manage it.</p>
+              <p class="magic-text-item" style="font-size:16px;color:var(--gray-600);margin:0 0 20px;line-height:1.6;font-weight:700">Friday 6 PM, close your laptop. Monday 8 AM, everything's done.</p>
+              <p class="magic-text-item" style="font-size:16px;color:var(--gray-600);line-height:1.6;margin:0 0 20px">Your AI team doesn't just run tasks — it learns your methods and gets sharper every week. Correct it once, it never makes the same mistake. The longer you use it, the less you need to manage it.</p>
               <p class="magic-text-item callout-quote" style="background:#F4FAFC;border-left-color:#0EA5E9;color:#0369A1;">AIs that stay, learn, and get better every week.</p>
             </div>
           </div>
         </div>
 
         <!-- Card 3 -->
-        <div class="magic-block delay-3" style="margin:72px 0">
+        <div class="magic-block delay-3" style="margin:56px 0">
           <div class="magic-card magic-card-hover" style="height:480px;background:#fff;border:var(--border-card);border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow-card)">
             <div class="magic-img" style="height:480px;display:flex;align-items:center;justify-content:center;padding:24px;box-sizing:border-box">
               <div class="magic-img-inner" style="width:100%;height:100%;transform:translateY(16px)">
@@ -1195,9 +1113,9 @@
             </div>
             <div class="magic-text" style="display:flex;flex-direction:column;justify-content:center;padding:24px 64px;overflow-y:auto;height:480px;background:#fff">
               <h3 class="magic-text-item" style="font-size:32px;font-weight:700;color:#0D0E10;line-height:1.4;margin:0 0 16px">"Claws" for business. Yours.</h3>
-              <p class="magic-text-item" style="font-size:16px;color:var(--gray-700);margin:0 0 20px;line-height:1.6;font-weight:700">The one-person unicorn isn't a fantasy — Autonomous Workspace makes it real.</p>
-              <p class="magic-text-item" style="font-size:16px;color:var(--gray-700);line-height:1.6;margin:0 0 20px">One founder with a fleet of AIs — that's a real company now. Your AIs share context, follow your rules, and scale your judgment across every function. You run the company. They run the operation.</p>
-              <p class="magic-text-item callout-quote" style="background:#FAF2F7;border-left-color:#C0699A;color:#57534E;">Every person becomes a general. Every team punches above its weight.</p>
+              <p class="magic-text-item" style="font-size:16px;color:var(--gray-600);margin:0 0 20px;line-height:1.6;font-weight:700">The one-person unicorn isn't a fantasy — Autonomous Workspace makes it real.</p>
+              <p class="magic-text-item" style="font-size:16px;color:var(--gray-600);line-height:1.6;margin:0 0 20px">One founder with a fleet of AIs — that's a real company now. Your AIs share context, follow your rules, and scale your judgment across every function. You run the company. They run the operation.</p>
+              <p class="magic-text-item callout-quote" style="background:#FAF2F7;border-left-color:#C0699A;color:#9A3B6E;">Every person becomes a general. Every team punches above its weight.</p>
             </div>
           </div>
         </div>
@@ -1226,7 +1144,7 @@
             </div>
             <h3 style="font-size:22px;font-weight:600;color:#000000;margin:0 0 8px">Documents</h3>
             <p style="font-size:16px;font-weight:700;font-style:italic;color:var(--primary-500);margin:0 0 8px">Think it. AI delivers it.</p>
-            <p style="font-size:14px;color:var(--gray-700);line-height:1.5;margin:0">Business plans, meeting notes, product specs, market research, SOPs</p>
+            <p style="font-size:14px;color:var(--gray-600);line-height:1.5;margin:0">Business plans, meeting notes, product specs, market research, SOPs</p>
           </div>
           <div class="card-scale deliverable-card" style="background:var(--white);border:var(--border-card);box-shadow:var(--shadow-card);border-radius:var(--radius-lg);padding:32px 24px;display:flex;flex-direction:column;align-items:center;text-align:center">
             <div class="deliv-icon" style="width:80px;height:80px;margin-bottom:20px;flex-shrink:0">
@@ -1241,7 +1159,7 @@
             </div>
             <h3 style="font-size:22px;font-weight:600;color:#000000;margin:0 0 8px">Data & Tables</h3>
             <p style="font-size:16px;font-weight:700;font-style:italic;color:var(--primary-500);margin:0 0 8px">Raw data in. Insights out.</p>
-            <p style="font-size:14px;color:var(--gray-700);line-height:1.5;margin:0">Financial models, customer analytics, KPI trackers, survey results, operational data</p>
+            <p style="font-size:14px;color:var(--gray-600);line-height:1.5;margin:0">Financial models, customer analytics, KPI trackers, survey results, operational data</p>
           </div>
           <div class="card-scale deliverable-card" style="background:var(--white);border:var(--border-card);box-shadow:var(--shadow-card);border-radius:var(--radius-lg);padding:32px 24px;display:flex;flex-direction:column;align-items:center;text-align:center">
             <div class="deliv-icon" style="width:80px;height:80px;margin-bottom:20px;flex-shrink:0">
@@ -1268,42 +1186,42 @@
           <div class="card-scale use-case-card" style="background:var(--white);border:var(--border-card);box-shadow:var(--shadow-card);border-radius:var(--radius-lg);padding:24px 20px">
             <div class="use-case-icon" style="width:40px;height:40px;border-radius:12px;background:#FBFAF8;display:flex;align-items:center;justify-content:center;margin-bottom:12px;box-shadow:0 1px 2px rgba(15,23,42,0.04)"><span class="iconify" data-icon="lucide:trending-up" data-width="20" data-height="20" style="color:#0D0E10"></span></div>
             <h3 style="font-size:16px;font-weight:600;color:var(--gray-700);margin:0 0 8px">Startup Fundraising</h3>
-            <p style="font-size:14px;color:var(--gray-700);line-height:1.5;margin:0">Pitch decks, financial models, investor updates, data rooms</p>
+            <p style="font-size:14px;color:var(--gray-600);line-height:1.5;margin:0">Pitch decks, financial models, investor updates, data rooms</p>
           </div>
           <div class="card-scale use-case-card" style="background:var(--white);border:var(--border-card);box-shadow:var(--shadow-card);border-radius:var(--radius-lg);padding:24px 20px">
             <div class="use-case-icon" style="width:40px;height:40px;border-radius:12px;background:#FBFAF8;display:flex;align-items:center;justify-content:center;margin-bottom:12px;box-shadow:0 1px 2px rgba(15,23,42,0.04)"><span class="iconify" data-icon="lucide:megaphone" data-width="20" data-height="20" style="color:#0D0E10"></span></div>
             <h3 style="font-size:16px;font-weight:600;color:var(--gray-700);margin:0 0 8px">Marketing Agency</h3>
-            <p style="font-size:14px;color:var(--gray-700);line-height:1.5;margin:0">Competitive analysis, campaign briefs, client reports, landing pages</p>
+            <p style="font-size:14px;color:var(--gray-600);line-height:1.5;margin:0">Competitive analysis, campaign briefs, client reports, landing pages</p>
           </div>
           <div class="card-scale use-case-card" style="background:var(--white);border:var(--border-card);box-shadow:var(--shadow-card);border-radius:var(--radius-lg);padding:24px 20px">
             <div class="use-case-icon" style="width:40px;height:40px;border-radius:12px;background:#FBFAF8;display:flex;align-items:center;justify-content:center;margin-bottom:12px;box-shadow:0 1px 2px rgba(15,23,42,0.04)"><span class="iconify" data-icon="lucide:rocket" data-width="20" data-height="20" style="color:#0D0E10"></span></div>
             <h3 style="font-size:16px;font-weight:600;color:var(--gray-700);margin:0 0 8px">Product Launch</h3>
-            <p style="font-size:14px;color:var(--gray-700);line-height:1.5;margin:0">PRDs, launch checklists, changelogs, press kits, product sites</p>
+            <p style="font-size:14px;color:var(--gray-600);line-height:1.5;margin:0">PRDs, launch checklists, changelogs, press kits, product sites</p>
           </div>
           <div class="card-scale use-case-card" style="background:var(--white);border:var(--border-card);box-shadow:var(--shadow-card);border-radius:var(--radius-lg);padding:24px 20px">
             <div class="use-case-icon" style="width:40px;height:40px;border-radius:12px;background:#FBFAF8;display:flex;align-items:center;justify-content:center;margin-bottom:12px;box-shadow:0 1px 2px rgba(15,23,42,0.04)"><span class="iconify" data-icon="lucide:pie-chart" data-width="20" data-height="20" style="color:#0D0E10"></span></div>
             <h3 style="font-size:16px;font-weight:600;color:var(--gray-700);margin:0 0 8px">Venture Capital Fund</h3>
-            <p style="font-size:14px;color:var(--gray-700);line-height:1.5;margin:0">Deal flow, investment memos, LP reports, portfolio dashboards</p>
+            <p style="font-size:14px;color:var(--gray-600);line-height:1.5;margin:0">Deal flow, investment memos, LP reports, portfolio dashboards</p>
           </div>
           <div class="card-scale use-case-card" style="background:var(--white);border:var(--border-card);box-shadow:var(--shadow-card);border-radius:var(--radius-lg);padding:24px 20px">
             <div class="use-case-icon" style="width:40px;height:40px;border-radius:12px;background:#FBFAF8;display:flex;align-items:center;justify-content:center;margin-bottom:12px;box-shadow:0 1px 2px rgba(15,23,42,0.04)"><span class="iconify" data-icon="lucide:shopping-bag" data-width="20" data-height="20" style="color:#0D0E10"></span></div>
             <h3 style="font-size:16px;font-weight:600;color:var(--gray-700);margin:0 0 8px">E-commerce Brand</h3>
-            <p style="font-size:14px;color:var(--gray-700);line-height:1.5;margin:0">Product analysis, inventory data, marketing assets, sales dashboards</p>
+            <p style="font-size:14px;color:var(--gray-600);line-height:1.5;margin:0">Product analysis, inventory data, marketing assets, sales dashboards</p>
           </div>
           <div class="card-scale use-case-card" style="background:var(--white);border:var(--border-card);box-shadow:var(--shadow-card);border-radius:var(--radius-lg);padding:24px 20px">
             <div class="use-case-icon" style="width:40px;height:40px;border-radius:12px;background:#FBFAF8;display:flex;align-items:center;justify-content:center;margin-bottom:12px;box-shadow:0 1px 2px rgba(15,23,42,0.04)"><span class="iconify" data-icon="lucide:briefcase" data-width="20" data-height="20" style="color:#0D0E10"></span></div>
             <h3 style="font-size:16px;font-weight:600;color:var(--gray-700);margin:0 0 8px">Consulting Practice</h3>
-            <p style="font-size:14px;color:var(--gray-700);line-height:1.5;margin:0">Project proposals, research reports, client deliverables, knowledge base</p>
+            <p style="font-size:14px;color:var(--gray-600);line-height:1.5;margin:0">Project proposals, research reports, client deliverables, knowledge base</p>
           </div>
           <div class="card-scale use-case-card" style="background:var(--white);border:var(--border-card);box-shadow:var(--shadow-card);border-radius:var(--radius-lg);padding:24px 20px">
             <div class="use-case-icon" style="width:40px;height:40px;border-radius:12px;background:#FBFAF8;display:flex;align-items:center;justify-content:center;margin-bottom:12px;box-shadow:0 1px 2px rgba(15,23,42,0.04)"><span class="iconify" data-icon="lucide:video" data-width="20" data-height="20" style="color:#0D0E10"></span></div>
             <h3 style="font-size:16px;font-weight:600;color:var(--gray-700);margin:0 0 8px">Content Studio</h3>
-            <p style="font-size:14px;color:var(--gray-700);line-height:1.5;margin:0">Editorial calendars, scripts, publish schedules, performance reviews</p>
+            <p style="font-size:14px;color:var(--gray-600);line-height:1.5;margin:0">Editorial calendars, scripts, publish schedules, performance reviews</p>
           </div>
           <div class="card-scale use-case-card" style="background:var(--white);border:var(--border-card);box-shadow:var(--shadow-card);border-radius:var(--radius-lg);padding:24px 20px">
             <div class="use-case-icon" style="width:40px;height:40px;border-radius:12px;background:#FBFAF8;display:flex;align-items:center;justify-content:center;margin-bottom:12px;box-shadow:0 1px 2px rgba(15,23,42,0.04)"><span class="iconify" data-icon="lucide:settings" data-width="20" data-height="20" style="color:#0D0E10"></span></div>
             <h3 style="font-size:16px;font-weight:600;color:var(--gray-700);margin:0 0 8px">SaaS Operations</h3>
-            <p style="font-size:14px;color:var(--gray-700);line-height:1.5;margin:0">Product roadmaps, user analytics, OKR tracking, team wikis</p>
+            <p style="font-size:14px;color:var(--gray-600);line-height:1.5;margin:0">Product roadmaps, user analytics, OKR tracking, team wikis</p>
           </div>
         </div>
       </section>
@@ -1337,32 +1255,32 @@
         <div style="display:grid;grid-template-columns:repeat(4, 1fr);gap:16px">
           <div class="comparison-card delay-1" style="background:var(--white);border:var(--border-card);border-radius:var(--radius-lg);padding:24px 20px;cursor:default;box-shadow:var(--shadow-card);display:flex;flex-direction:column">
             <h3 style="font-size:20px;font-weight:600;color:var(--gray-700);margin:0 0 12px">OpenClaw</h3>
-            <p style="font-size:14px;color:var(--gray-700);line-height:1.5;margin:0 0 10px">A powerful personal AI assistant built around your local environment. Great for power users.</p>
-            <p style="font-size:14px;font-style:italic;font-weight:500;color:var(--primary-700);margin:0 0 14px">→ Single-player only. No collaboration.</p>
+            <p style="font-size:14px;color:var(--gray-600);line-height:1.5;margin:0 0 10px">A powerful personal AI assistant built around your local environment. Great for power users.</p>
+            <p style="font-size:14px;font-style:italic;font-weight:700;color:var(--primary-700);margin:0 0 14px">Single-player only. No collaboration.</p>
             <div style="aspect-ratio:4/3;border-radius:var(--radius-md);overflow:hidden;background:var(--gray-50);margin-top:auto">
               <img src="assets/images/comp-openclaw.png" alt="OpenClaw" style="width:100%;height:100%;object-fit:cover;display:block" />
             </div>
           </div>
           <div class="comparison-card delay-2" style="background:var(--white);border:var(--border-card);border-radius:var(--radius-lg);padding:24px 20px;cursor:default;box-shadow:var(--shadow-card);display:flex;flex-direction:column">
             <h3 style="font-size:20px;font-weight:600;color:var(--gray-700);margin:0 0 12px">ChatGPT / Manus</h3>
-            <p style="font-size:14px;color:var(--gray-700);line-height:1.5;margin:0 0 10px">Ask and get answers. AI capabilities are catching up fast, with new features every week.</p>
-            <p style="font-size:14px;font-style:italic;font-weight:500;color:var(--primary-700);margin:0 0 14px">→ Task-driven, not a persistent workspace.</p>
+            <p style="font-size:14px;color:var(--gray-600);line-height:1.5;margin:0 0 10px">Ask and get answers. AI capabilities are catching up fast, with new features every week.</p>
+            <p style="font-size:14px;font-style:italic;font-weight:700;color:var(--primary-700);margin:0 0 14px">Task-driven, not a persistent workspace.</p>
             <div style="aspect-ratio:4/3;border-radius:var(--radius-md);overflow:hidden;background:var(--gray-50);margin-top:auto">
               <img src="assets/images/comp-chatgpt.png" alt="ChatGPT / Manus" style="width:100%;height:100%;object-fit:cover;display:block" />
             </div>
           </div>
           <div class="comparison-card delay-3" style="background:var(--white);border:var(--border-card);border-radius:var(--radius-lg);padding:24px 20px;cursor:default;box-shadow:var(--shadow-card);display:flex;flex-direction:column">
             <h3 style="font-size:20px;font-weight:600;color:var(--gray-700);margin:0 0 12px">Notion</h3>
-            <p style="font-size:14px;color:var(--gray-700);line-height:1.5;margin:0 0 10px">Beautiful docs, rich collaboration. The go-to workspace for modern teams.</p>
-            <p style="font-size:14px;font-style:italic;font-weight:500;color:var(--primary-700);margin:0 0 14px">→ Designed for humans. Not AI-native.</p>
+            <p style="font-size:14px;color:var(--gray-600);line-height:1.5;margin:0 0 10px">Beautiful docs, rich collaboration. The go-to workspace for modern teams.</p>
+            <p style="font-size:14px;font-style:italic;font-weight:700;color:var(--primary-700);margin:0 0 14px">Designed for humans. Not AI-native.</p>
             <div style="aspect-ratio:4/3;border-radius:var(--radius-md);overflow:hidden;background:var(--gray-50);margin-top:auto">
               <img src="assets/images/comp-notion.png" alt="Notion" style="width:100%;height:100%;object-fit:cover;display:block" />
             </div>
           </div>
           <div class="comparison-card delay-4" style="background:var(--white);border:var(--border-card);border-radius:var(--radius-lg);padding:24px 20px;cursor:default;box-shadow:var(--shadow-card);display:flex;flex-direction:column">
             <h3 style="font-size:20px;font-weight:600;color:var(--gray-700);margin:0 0 12px">Cursor / Claude Code</h3>
-            <p style="font-size:14px;color:var(--gray-700);line-height:1.5;margin:0 0 10px">Incredibly powerful AI-assisted coding. A must-have for professional developers.</p>
-            <p style="font-size:14px;font-style:italic;font-weight:500;color:var(--primary-700);margin:0 0 14px">→ Built for engineers. Not for everyone.</p>
+            <p style="font-size:14px;color:var(--gray-600);line-height:1.5;margin:0 0 10px">Incredibly powerful AI-assisted coding. A must-have for professional developers.</p>
+            <p style="font-size:14px;font-style:italic;font-weight:700;color:var(--primary-700);margin:0 0 14px">Built for engineers. Not for everyone.</p>
             <div style="aspect-ratio:4/3;border-radius:var(--radius-md);overflow:hidden;background:var(--gray-50);margin-top:auto">
               <img src="assets/images/comp-cursor.png" alt="Cursor / Claude Code" style="width:100%;height:100%;object-fit:cover;display:block" />
             </div>
@@ -1382,87 +1300,87 @@
               <div style="width:72px;height:72px;border-radius:var(--radius-lg);background:var(--white);display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-card);color:#4285F4">
                 <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/googledocs.svg" alt="Google Docs" style="width:36px;height:36px" />
               </div>
-              <span style="font-size:13px;font-weight:500;color:var(--gray-700);white-space:nowrap">Google Docs</span>
+              <span style="font-size:13px;font-weight:500;color:var(--gray-600);white-space:nowrap">Google Docs</span>
             </div>
 
             <div class="brand-icon-item" style="position:absolute;display:flex;flex-direction:column;align-items:center;gap:8px;left:70%;top:15%;opacity:0;transform:translate(-50%,-50%) scale(0)">
               <div style="width:72px;height:72px;border-radius:var(--radius-lg);background:var(--white);display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-card)">
                 <span class="iconify" data-icon="logos:notion-icon" data-width="36"></span>
               </div>
-              <span style="font-size:13px;font-weight:500;color:var(--gray-700);white-space:nowrap">Notion</span>
+              <span style="font-size:13px;font-weight:500;color:var(--gray-600);white-space:nowrap">Notion</span>
             </div>
 
             <div class="brand-icon-item" style="position:absolute;display:flex;flex-direction:column;align-items:center;gap:8px;left:85%;top:30%;opacity:0;transform:translate(-50%,-50%) scale(0)">
               <div style="width:72px;height:72px;border-radius:var(--radius-lg);background:var(--white);display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-card)">
                 <span class="iconify" data-icon="logos:slack-icon" data-width="36"></span>
               </div>
-              <span style="font-size:13px;font-weight:500;color:var(--gray-700);white-space:nowrap">Slack</span>
+              <span style="font-size:13px;font-weight:500;color:var(--gray-600);white-space:nowrap">Slack</span>
             </div>
 
             <div class="brand-icon-item" style="position:absolute;display:flex;flex-direction:column;align-items:center;gap:8px;left:90%;top:50%;opacity:0;transform:translate(-50%,-50%) scale(0)">
               <div style="width:72px;height:72px;border-radius:var(--radius-lg);background:var(--white);display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-card)">
                 <span class="iconify" data-icon="simple-icons:googlesheets" data-width="36" style="color:#0F9D58"></span>
               </div>
-              <span style="font-size:13px;font-weight:500;color:var(--gray-700);white-space:nowrap">Spreadsheets</span>
+              <span style="font-size:13px;font-weight:500;color:var(--gray-600);white-space:nowrap">Spreadsheets</span>
             </div>
 
             <div class="brand-icon-item" style="position:absolute;display:flex;flex-direction:column;align-items:center;gap:8px;left:85%;top:70%;opacity:0;transform:translate(-50%,-50%) scale(0)">
               <div style="width:72px;height:72px;border-radius:var(--radius-lg);background:var(--white);display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-card)">
                 <span class="iconify" data-icon="logos:figma" data-width="32"></span>
               </div>
-              <span style="font-size:13px;font-weight:500;color:var(--gray-700);white-space:nowrap">Figma</span>
+              <span style="font-size:13px;font-weight:500;color:var(--gray-600);white-space:nowrap">Figma</span>
             </div>
 
             <div class="brand-icon-item" style="position:absolute;display:flex;flex-direction:column;align-items:center;gap:8px;left:70%;top:85%;opacity:0;transform:translate(-50%,-50%) scale(0)">
               <div style="width:72px;height:72px;border-radius:var(--radius-lg);background:var(--white);display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-card)">
                 <span class="iconify" data-icon="lucide:folder" data-width="36" style="color:var(--gray-500)"></span>
               </div>
-              <span style="font-size:13px;font-weight:500;color:var(--gray-700);white-space:nowrap">Local Files</span>
+              <span style="font-size:13px;font-weight:500;color:var(--gray-600);white-space:nowrap">Local Files</span>
             </div>
 
             <div class="brand-icon-item" style="position:absolute;display:flex;flex-direction:column;align-items:center;gap:8px;left:50%;top:90%;opacity:0;transform:translate(-50%,-50%) scale(0)">
               <div style="width:72px;height:72px;border-radius:var(--radius-lg);background:var(--white);display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-card)">
                 <span class="iconify" data-icon="logos:github-icon" data-width="36"></span>
               </div>
-              <span style="font-size:13px;font-weight:500;color:var(--gray-700);white-space:nowrap">GitHub</span>
+              <span style="font-size:13px;font-weight:500;color:var(--gray-600);white-space:nowrap">GitHub</span>
             </div>
 
             <div class="brand-icon-item" style="position:absolute;display:flex;flex-direction:column;align-items:center;gap:8px;left:30%;top:85%;opacity:0;transform:translate(-50%,-50%) scale(0)">
               <div style="width:72px;height:72px;border-radius:var(--radius-lg);background:var(--white);display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-card)">
                 <span class="iconify" data-icon="lucide:mail" data-width="36" style="color:var(--gray-500)"></span>
               </div>
-              <span style="font-size:13px;font-weight:500;color:var(--gray-700);white-space:nowrap">Emails</span>
+              <span style="font-size:13px;font-weight:500;color:var(--gray-600);white-space:nowrap">Emails</span>
             </div>
 
             <div class="brand-icon-item" style="position:absolute;display:flex;flex-direction:column;align-items:center;gap:8px;left:15%;top:70%;opacity:0;transform:translate(-50%,-50%) scale(0)">
               <div style="width:72px;height:72px;border-radius:var(--radius-lg);background:var(--white);display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-card)">
                 <span class="iconify" data-icon="lucide:globe" data-width="36" style="color:var(--gray-500)"></span>
               </div>
-              <span style="font-size:13px;font-weight:500;color:var(--gray-700);white-space:nowrap">Web Articles</span>
+              <span style="font-size:13px;font-weight:500;color:var(--gray-600);white-space:nowrap">Web Articles</span>
             </div>
 
             <div class="brand-icon-item" style="position:absolute;display:flex;flex-direction:column;align-items:center;gap:8px;left:10%;top:50%;opacity:0;transform:translate(-50%,-50%) scale(0)">
               <div style="width:72px;height:72px;border-radius:var(--radius-lg);background:var(--white);display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-card)">
                 <span class="iconify" data-icon="lucide:brain" data-width="36" style="color:var(--gray-500)"></span>
               </div>
-              <span style="font-size:13px;font-weight:500;color:var(--gray-700);white-space:nowrap">Your Head</span>
+              <span style="font-size:13px;font-weight:500;color:var(--gray-600);white-space:nowrap">Your Head</span>
             </div>
 
             <div class="brand-icon-item" style="position:absolute;display:flex;flex-direction:column;align-items:center;gap:8px;left:15%;top:30%;opacity:0;transform:translate(-50%,-50%) scale(0)">
               <div style="width:72px;height:72px;border-radius:var(--radius-lg);background:var(--white);display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-card)">
                 <span class="iconify" data-icon="lucide:mic" data-width="36" style="color:var(--gray-500)"></span>
               </div>
-              <span style="font-size:13px;font-weight:500;color:var(--gray-700);white-space:nowrap">Meeting Notes</span>
+              <span style="font-size:13px;font-weight:500;color:var(--gray-600);white-space:nowrap">Meeting Notes</span>
             </div>
 
             <div class="brand-icon-item" style="position:absolute;display:flex;flex-direction:column;align-items:center;gap:8px;left:30%;top:15%;opacity:0;transform:translate(-50%,-50%) scale(0)">
               <div style="width:72px;height:72px;border-radius:var(--radius-lg);background:var(--white);display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-card)">
                 <span class="iconify" data-icon="simple-icons:jira" data-width="36" style="color:#0052CC"></span>
               </div>
-              <span style="font-size:13px;font-weight:500;color:var(--gray-700);white-space:nowrap">Jira Tickets</span>
+              <span style="font-size:13px;font-weight:500;color:var(--gray-600);white-space:nowrap">Jira Tickets</span>
             </div>
 
-            <div id="brand-intro-text" style="position:absolute;left:50%;top:50%;z-index:2;font-size:72px;font-weight:700;line-height:1.04;letter-spacing:-0.05em;color:var(--gray-700);white-space:nowrap;opacity:0;transform:translate(-50%, -50%) scale(0.84)">
+            <div id="brand-intro-text" style="position:absolute;left:50%;top:50%;z-index:2;font-size:72px;font-weight:700;line-height:1.04;letter-spacing:-0.05em;color:var(--gray-600);white-space:nowrap;opacity:0;transform:translate(-50%, -50%) scale(0.84)">
               More <span style="color:var(--primary-500)">Context</span>. More Magic.
             </div>
             <div id="brand-final-group" style="position:absolute;left:50%;top:50%;z-index:2;display:flex;align-items:center;justify-content:center;opacity:0;transform:translate(-50%, -50%)">
@@ -1518,9 +1436,9 @@
         <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px">
           <img src="assets/images/moxt-logo.svg" alt="Moxt" style="height:28px;width:auto" />
           <div style="display:flex;align-items:center;gap:28px">
-<a href="#pricing" style="font-size:14px;font-weight:500;color:var(--gray-600);transition:color 0.2s ease-out" class="footer-link">Pricing</a>
+<a href="#" style="font-size:14px;font-weight:500;color:var(--gray-600);transition:color 0.2s ease-out" class="footer-link">What's New</a>
           <a href="#" style="font-size:14px;font-weight:500;color:var(--gray-600);transition:color 0.2s ease-out" class="footer-link">Blog</a>
-          <a href="#" style="font-size:14px;font-weight:500;color:var(--gray-600);transition:color 0.2s ease-out" class="footer-link">What's New</a>
+          <a href="#pricing" style="font-size:14px;font-weight:500;color:var(--gray-600);transition:color 0.2s ease-out" class="footer-link">Pricing</a>
           </div>
           <div style="display:flex;gap:20px;align-items:center">
 <a href="#" title="X / Twitter" class="footer-link" style="color:var(--gray-600);display:flex;align-items:center;transition:color 0.2s ease-out">
