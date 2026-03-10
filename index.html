@@ -1136,7 +1136,7 @@
 
           <!-- App 窗口 Mockup (4:3) -->
           <div id="hero-app-window" style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 12px 40px rgba(0,0,0,.06),0 2px 8px rgba(0,0,0,.04);width:585px;max-width:585px;line-height:0;margin-top:-48px;margin-left:48px;">
-            <img src="assets/images/hero-ui.svg" alt="Moxt Workspace" style="width:100%;height:auto;display:block;border-radius:var(--radius-lg);" />
+            <img src="assets/images/界面01.svg" alt="Moxt Workspace" style="width:100%;height:auto;display:block;border-radius:var(--radius-lg);" />
           </div>
         </div>
 
@@ -1374,7 +1374,7 @@
     <!-- Brand Animation Section -->
     <div style="background:#F5F6F2;position:relative;z-index:1">
       <section id="brand-animation-section">
-        <div style="height:500vh">
+        <div style="height:600vh">
           <div id="brand-sticky" style="position:sticky;top:0;height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden">
             <div style="max-width:1280px;margin:0 auto;width:100%;position:relative;height:100%;display:flex;align-items:center;justify-content:center">
             <div id="brand-ring" style="position:relative;width:min(1000px, 86vw, 100vh);height:min(1000px, 86vw, 100vh)">
@@ -1462,7 +1462,7 @@
               <span style="font-size:13px;font-weight:500;color:var(--gray-700);white-space:nowrap">Jira Tickets</span>
             </div>
 
-            <div id="brand-intro-text" style="position:absolute;left:50%;top:50%;z-index:2;font-size:72px;font-weight:700;line-height:1.04;letter-spacing:-0.05em;color:var(--gray-600);white-space:nowrap;opacity:0;transform:translate(-50%, -50%) scale(0.84)">
+            <div id="brand-intro-text" style="position:absolute;left:50%;top:50%;z-index:2;font-size:72px;font-weight:700;line-height:1.04;letter-spacing:-0.05em;color:var(--gray-700);white-space:nowrap;opacity:0;transform:translate(-50%, -50%) scale(0.84)">
               More <span style="color:var(--primary-500)">Context</span>. More Magic.
             </div>
             <div id="brand-final-group" style="position:absolute;left:50%;top:50%;z-index:2;display:flex;align-items:center;justify-content:center;opacity:0;transform:translate(-50%, -50%)">
@@ -1680,6 +1680,7 @@
     import { scroll } from "https://cdn.jsdelivr.net/npm/motion@11.11.17/+esm";
 
     const easeOutCubic = t => 1 - Math.pow(1 - t, 3);
+    const easeOutQuart = t => 1 - Math.pow(1 - t, 4);
     const clamp01 = value => Math.max(0, Math.min(1, value));
     const mapRange = (value, inMin, inMax) => clamp01((value - inMin) / (inMax - inMin || 1));
 
@@ -1778,20 +1779,21 @@
       });
 
       function update(progress) {
-        const p = easeOutCubic(Math.max(0, Math.min(1, progress)));
+        const raw = Math.max(0, Math.min(1, progress));
+        const p = easeOutQuart(Math.pow(raw, 1.15));
 
         const phase1 = Math.min(p / 0.22, 1);
         brandIcons.forEach((icon, i) => {
           const delay = i * 0.028;
           const t = Math.max(0, Math.min((phase1 - delay) / (1 - delay || 0.01), 1));
-          const easeT = easeOutCubic(t);
+          const easeT = easeOutQuart(t);
           icon.style.opacity = easeT;
           icon.style.transform = `translate(-50%, -50%) scale(${easeT})`;
         });
 
         if (p > 0.22) {
           const phase2 = Math.min((p - 0.22) / 0.2, 1);
-          const e2 = easeOutCubic(phase2);
+          const e2 = easeOutQuart(phase2);
           brandIcons.forEach((icon, i) => {
             const { left: cl, top: ct } = originPos[i];
             const move = e2 * 0.95;
@@ -1808,12 +1810,12 @@
             brandIntroText.style.transform = 'translate(-50%, -50%) scale(0.84)';
           } else if (p < 0.58) {
             const introIn = Math.min((p - 0.22) / 0.16, 1);
-            const eIntroIn = easeOutCubic(introIn);
+            const eIntroIn = easeOutQuart(introIn);
             brandIntroText.style.opacity = eIntroIn;
             brandIntroText.style.transform = `translate(-50%, -50%) scale(${0.84 + eIntroIn * 0.16})`;
           } else {
             const introOut = Math.min((p - 0.58) / 0.12, 1);
-            const eIntroOut = easeOutCubic(introOut);
+            const eIntroOut = easeOutQuart(introOut);
             brandIntroText.style.opacity = Math.max(0, 1 - eIntroOut);
             brandIntroText.style.transform = `translate(-50%, -50%) scale(${1 + eIntroOut * 0.04})`;
           }
@@ -1847,7 +1849,7 @@
           }
         } else {
           const phase3 = Math.min((p - 0.58) / 0.2, 1);
-          const e3 = easeOutCubic(phase3);
+          const e3 = easeOutQuart(phase3);
           brandFinalGroup.style.opacity = e3;
           brandFinalGroup.style.transform = `translate(-50%, -50%)`;
           brandLogo.style.opacity = e3;
@@ -1862,7 +1864,7 @@
           brandIps.forEach((ip, i) => {
             const rotate = ip.dataset.rotate || '0';
             const ipIn = Math.max(0, Math.min((p - (0.64 + i * 0.05)) / 0.12, 1));
-            const ipEase = easeOutCubic(ipIn);
+            const ipEase = easeOutQuart(ipIn);
             ip.style.opacity = ipEase * 0.98;
             ip.style.transform = `translate(-50%, -50%) scale(${0.82 + ipEase * 0.18}) rotate(${rotate}deg)`;
             ip.style.filter = `blur(${10 * (1 - ipEase)}px)`;
@@ -1881,7 +1883,7 @@
 
         if (p > 0.78) {
           const phase4 = Math.min((p - 0.78) / 0.22, 1);
-          const e4 = easeOutCubic(phase4);
+          const e4 = easeOutQuart(phase4);
           brandCta.style.opacity = e4;
           brandCta.style.transform = `translateY(${28 * (1 - e4)}px)`;
           brandCta.style.filter = `blur(${8 * (1 - e4)}px)`;
