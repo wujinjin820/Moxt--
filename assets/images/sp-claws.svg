@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" fill="none">
+  <rect width="640" height="480" fill="#FAF9F6"/>
+
+  <!-- Subtle radial glow -->
+  <circle cx="320" cy="210" r="180" fill="#2FB872" opacity="0.04"/>
+  <circle cx="320" cy="210" r="100" fill="#2FB872" opacity="0.05"/>
+
+  <!-- Connection lines from center to AI nodes -->
+  <line x1="320" y1="210" x2="120" y2="100" stroke="#2FB872" stroke-width="1.5" opacity="0.25"/>
+  <line x1="320" y1="210" x2="320" y2="60" stroke="#2FB872" stroke-width="1.5" opacity="0.25"/>
+  <line x1="320" y1="210" x2="520" y2="100" stroke="#2FB872" stroke-width="1.5" opacity="0.25"/>
+  <line x1="320" y1="210" x2="100" y2="280" stroke="#2FB872" stroke-width="1.5" opacity="0.25"/>
+  <line x1="320" y1="210" x2="540" y2="280" stroke="#2FB872" stroke-width="1.5" opacity="0.25"/>
+  <line x1="320" y1="210" x2="200" y2="380" stroke="#2FB872" stroke-width="1.5" opacity="0.25"/>
+  <line x1="320" y1="210" x2="440" y2="380" stroke="#2FB872" stroke-width="1.5" opacity="0.25"/>
+
+  <!-- Central founder/user -->
+  <g transform="translate(320, 210)">
+    <!-- Outer glow rings -->
+    <circle r="52" fill="none" stroke="#2FB872" stroke-width="1" opacity="0.15"/>
+    <circle r="44" fill="#2FB872"/>
+    <!-- Person icon -->
+    <circle cy="-8" r="12" fill="#FAF9F6"/>
+    <path d="M-18 18 Q-18 4 0 4 Q18 4 18 18 Q18 28 0 28 Q-18 28 -18 18Z" fill="#FAF9F6"/>
+    <!-- Crown / star -->
+    <path d="M-10 -28 L-6 -22 L0 -30 L6 -22 L10 -28 L8 -18 L-8 -18Z" fill="#FFD93D" stroke="#E8B830" stroke-width="1"/>
+  </g>
+
+  <!-- AI Node 1: Research (top-left) -->
+  <g transform="translate(120, 100)">
+    <rect x="-48" y="-36" width="96" height="72" rx="10" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1.5"/>
+    <circle cy="-8" r="14" fill="#E8F8F0" stroke="#2FB872" stroke-width="1.5"/>
+    <circle cx="-4" cy="-10" r="2" fill="#2D2A26"/>
+    <circle cx="4" cy="-10" r="2" fill="#2D2A26"/>
+    <line x1="0" y1="-22" x2="0" y2="-28" stroke="#2FB872" stroke-width="1.5"/>
+    <circle cy="-30" r="2.5" fill="#2FB872"/>
+    <text y="22" text-anchor="middle" font-size="10" font-family="system-ui,sans-serif" fill="#4A4540" font-weight="600">Research</text>
+    <!-- Status dot -->
+    <circle cx="38" cy="-26" r="5" fill="#2FB872"/>
+  </g>
+
+  <!-- AI Node 2: Write (top-center) -->
+  <g transform="translate(320, 60)">
+    <rect x="-48" y="-36" width="96" height="72" rx="10" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1.5"/>
+    <circle cy="-8" r="14" fill="#E8F8F0" stroke="#2FB872" stroke-width="1.5"/>
+    <circle cx="-4" cy="-10" r="2" fill="#2D2A26"/>
+    <circle cx="4" cy="-10" r="2" fill="#2D2A26"/>
+    <line x1="0" y1="-22" x2="0" y2="-28" stroke="#2FB872" stroke-width="1.5"/>
+    <circle cy="-30" r="2.5" fill="#2FB872"/>
+    <text y="22" text-anchor="middle" font-size="10" font-family="system-ui,sans-serif" fill="#4A4540" font-weight="600">Write</text>
+    <circle cx="38" cy="-26" r="5" fill="#2FB872"/>
+  </g>
+
+  <!-- AI Node 3: Analyze (top-right) -->
+  <g transform="translate(520, 100)">
+    <rect x="-48" y="-36" width="96" height="72" rx="10" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1.5"/>
+    <circle cy="-8" r="14" fill="#E8F8F0" stroke="#2FB872" stroke-width="1.5"/>
+    <circle cx="-4" cy="-10" r="2" fill="#2D2A26"/>
+    <circle cx="4" cy="-10" r="2" fill="#2D2A26"/>
+    <line x1="0" y1="-22" x2="0" y2="-28" stroke="#2FB872" stroke-width="1.5"/>
+    <circle cy="-30" r="2.5" fill="#2FB872"/>
+    <text y="22" text-anchor="middle" font-size="10" font-family="system-ui,sans-serif" fill="#4A4540" font-weight="600">Analyze</text>
+    <circle cx="38" cy="-26" r="5" fill="#2FB872"/>
+  </g>
+
+  <!-- AI Node 4: Design (mid-left) -->
+  <g transform="translate(100, 280)">
+    <rect x="-48" y="-36" width="96" height="72" rx="10" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1.5"/>
+    <circle cy="-8" r="14" fill="#E8F8F0" stroke="#2FB872" stroke-width="1.5"/>
+    <circle cx="-4" cy="-10" r="2" fill="#2D2A26"/>
+    <circle cx="4" cy="-10" r="2" fill="#2D2A26"/>
+    <line x1="0" y1="-22" x2="0" y2="-28" stroke="#2FB872" stroke-width="1.5"/>
+    <circle cy="-30" r="2.5" fill="#2FB872"/>
+    <text y="22" text-anchor="middle" font-size="10" font-family="system-ui,sans-serif" fill="#4A4540" font-weight="600">Design</text>
+    <circle cx="38" cy="-26" r="5" fill="#2FB872"/>
+  </g>
+
+  <!-- AI Node 5: Build (mid-right) -->
+  <g transform="translate(540, 280)">
+    <rect x="-48" y="-36" width="96" height="72" rx="10" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1.5"/>
+    <circle cy="-8" r="14" fill="#E8F8F0" stroke="#2FB872" stroke-width="1.5"/>
+    <circle cx="-4" cy="-10" r="2" fill="#2D2A26"/>
+    <circle cx="4" cy="-10" r="2" fill="#2D2A26"/>
+    <line x1="0" y1="-22" x2="0" y2="-28" stroke="#2FB872" stroke-width="1.5"/>
+    <circle cy="-30" r="2.5" fill="#2FB872"/>
+    <text y="22" text-anchor="middle" font-size="10" font-family="system-ui,sans-serif" fill="#4A4540" font-weight="600">Build</text>
+    <circle cx="38" cy="-26" r="5" fill="#2FB872"/>
+  </g>
+
+  <!-- AI Node 6: Report (bottom-left) -->
+  <g transform="translate(200, 380)">
+    <rect x="-48" y="-36" width="96" height="72" rx="10" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1.5"/>
+    <circle cy="-8" r="14" fill="#E8F8F0" stroke="#2FB872" stroke-width="1.5"/>
+    <circle cx="-4" cy="-10" r="2" fill="#2D2A26"/>
+    <circle cx="4" cy="-10" r="2" fill="#2D2A26"/>
+    <line x1="0" y1="-22" x2="0" y2="-28" stroke="#2FB872" stroke-width="1.5"/>
+    <circle cy="-30" r="2.5" fill="#2FB872"/>
+    <text y="22" text-anchor="middle" font-size="10" font-family="system-ui,sans-serif" fill="#4A4540" font-weight="600">Report</text>
+    <circle cx="38" cy="-26" r="5" fill="#2FB872"/>
+  </g>
+
+  <!-- AI Node 7: Operate (bottom-right) -->
+  <g transform="translate(440, 380)">
+    <rect x="-48" y="-36" width="96" height="72" rx="10" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1.5"/>
+    <circle cy="-8" r="14" fill="#E8F8F0" stroke="#2FB872" stroke-width="1.5"/>
+    <circle cx="-4" cy="-10" r="2" fill="#2D2A26"/>
+    <circle cx="4" cy="-10" r="2" fill="#2D2A26"/>
+    <line x1="0" y1="-22" x2="0" y2="-28" stroke="#2FB872" stroke-width="1.5"/>
+    <circle cy="-30" r="2.5" fill="#2FB872"/>
+    <text y="22" text-anchor="middle" font-size="10" font-family="system-ui,sans-serif" fill="#4A4540" font-weight="600">Operate</text>
+    <circle cx="38" cy="-26" r="5" fill="#2FB872"/>
+  </g>
+
+  <!-- Pulse rings around center -->
+  <circle cx="320" cy="210" r="60" fill="none" stroke="#2FB872" stroke-width="0.8" opacity="0.12" stroke-dasharray="4 3"/>
+  <circle cx="320" cy="210" r="140" fill="none" stroke="#2FB872" stroke-width="0.8" opacity="0.08" stroke-dasharray="4 3"/>
+
+  <!-- Sparkles -->
+  <path d="M60 40 L63 48 L72 50 L63 52 L60 60 L57 52 L48 50 L57 48Z" fill="#2FB872" opacity="0.3"/>
+  <path d="M580 40 L582 46 L588 48 L582 50 L580 56 L578 50 L572 48 L578 46Z" fill="#52C98E" opacity="0.25"/>
+  <path d="M320 450 L323 458 L332 460 L323 462 L320 470 L317 462 L308 460 L317 458Z" fill="#2FB872" opacity="0.2"/>
+
+  <!-- Bottom label -->
+  <text x="320" y="465" text-anchor="middle" font-size="12" font-family="system-ui,sans-serif" fill="#4A4540" font-weight="600" letter-spacing="0.08em" opacity="0.5">YOU LEAD · AIs OPERATE</text>
+</svg>

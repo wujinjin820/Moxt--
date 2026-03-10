@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" fill="none">
+  <rect width="640" height="480" fill="#FAF9F6"/>
+
+  <!-- Subtle grid -->
+  <g opacity="0.05">
+    <line x1="0" y1="96" x2="640" y2="96" stroke="#2D2A26" stroke-width="0.5"/>
+    <line x1="0" y1="192" x2="640" y2="192" stroke="#2D2A26" stroke-width="0.5"/>
+    <line x1="0" y1="288" x2="640" y2="288" stroke="#2D2A26" stroke-width="0.5"/>
+    <line x1="0" y1="384" x2="640" y2="384" stroke="#2D2A26" stroke-width="0.5"/>
+    <line x1="128" y1="0" x2="128" y2="480" stroke="#2D2A26" stroke-width="0.5"/>
+    <line x1="256" y1="0" x2="256" y2="480" stroke="#2D2A26" stroke-width="0.5"/>
+    <line x1="384" y1="0" x2="384" y2="480" stroke="#2D2A26" stroke-width="0.5"/>
+    <line x1="512" y1="0" x2="512" y2="480" stroke="#2D2A26" stroke-width="0.5"/>
+  </g>
+
+  <!-- Timeline bar -->
+  <rect x="60" y="56" width="520" height="36" rx="18" fill="#E8F8F0" stroke="#B8EDCF" stroke-width="1.5"/>
+  <text x="100" y="79" font-size="11" font-family="system-ui,sans-serif" fill="#1F8A56" font-weight="600">MON</text>
+  <text x="195" y="79" font-size="11" font-family="system-ui,sans-serif" fill="#1F8A56" font-weight="600">TUE</text>
+  <text x="290" y="79" font-size="11" font-family="system-ui,sans-serif" fill="#1F8A56" font-weight="600">WED</text>
+  <text x="385" y="79" font-size="11" font-family="system-ui,sans-serif" fill="#1F8A56" font-weight="600">THU</text>
+  <text x="480" y="79" font-size="11" font-family="system-ui,sans-serif" fill="#1F8A56" font-weight="600">FRI</text>
+  <!-- Progress fill -->
+  <rect x="62" y="58" width="480" height="32" rx="16" fill="#2FB872" opacity="0.15"/>
+
+  <!-- AI Agent 1: Research bot -->
+  <g transform="translate(60, 120)">
+    <rect width="160" height="180" rx="12" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1.5"/>
+    <!-- Agent avatar -->
+    <circle cx="80" cy="40" r="22" fill="#E8F8F0" stroke="#2FB872" stroke-width="2"/>
+    <circle cx="74" cy="36" r="3" fill="#2D2A26"/>
+    <circle cx="86" cy="36" r="3" fill="#2D2A26"/>
+    <path d="M72 44 Q80 52 88 44" stroke="#2D2A26" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+    <!-- Antenna -->
+    <line x1="80" y1="18" x2="80" y2="8" stroke="#2FB872" stroke-width="1.5"/>
+    <circle cx="80" cy="6" r="3" fill="#2FB872"/>
+    <!-- Task list -->
+    <rect x="16" y="72" width="128" height="6" rx="3" fill="#E8F8F0"/>
+    <rect x="16" y="72" width="128" height="6" rx="3" fill="#2FB872" opacity="0.6"/>
+    <text x="80" y="97" text-anchor="middle" font-size="10" font-family="system-ui,sans-serif" fill="#4A4540" font-weight="500">Market Research</text>
+    <!-- Completed items -->
+    <g transform="translate(16, 108)">
+      <circle cx="8" cy="8" r="6" fill="#2FB872" opacity="0.2"/>
+      <path d="M5 8 L7 10 L11 6" stroke="#2FB872" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="22" y="5" width="80" height="5" rx="1.5" fill="#E8E6E3"/>
+    </g>
+    <g transform="translate(16, 128)">
+      <circle cx="8" cy="8" r="6" fill="#2FB872" opacity="0.2"/>
+      <path d="M5 8 L7 10 L11 6" stroke="#2FB872" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="22" y="5" width="60" height="5" rx="1.5" fill="#E8E6E3"/>
+    </g>
+    <g transform="translate(16, 148)">
+      <circle cx="8" cy="8" r="6" fill="#2FB872" opacity="0.2"/>
+      <path d="M5 8 L7 10 L11 6" stroke="#2FB872" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="22" y="5" width="96" height="5" rx="1.5" fill="#E8E6E3"/>
+    </g>
+  </g>
+
+  <!-- AI Agent 2: Writer bot -->
+  <g transform="translate(240, 120)">
+    <rect width="160" height="180" rx="12" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1.5"/>
+    <!-- Agent avatar -->
+    <circle cx="80" cy="40" r="22" fill="#E8F8F0" stroke="#2FB872" stroke-width="2"/>
+    <circle cx="74" cy="36" r="3" fill="#2D2A26"/>
+    <circle cx="86" cy="36" r="3" fill="#2D2A26"/>
+    <path d="M72 44 Q80 52 88 44" stroke="#2D2A26" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+    <line x1="80" y1="18" x2="80" y2="8" stroke="#2FB872" stroke-width="1.5"/>
+    <circle cx="80" cy="6" r="3" fill="#2FB872"/>
+    <!-- Progress bar -->
+    <rect x="16" y="72" width="128" height="6" rx="3" fill="#E8F8F0"/>
+    <rect x="16" y="72" width="90" height="6" rx="3" fill="#2FB872" opacity="0.6"/>
+    <text x="80" y="97" text-anchor="middle" font-size="10" font-family="system-ui,sans-serif" fill="#4A4540" font-weight="500">Content Writing</text>
+    <!-- Document being written -->
+    <rect x="20" y="108" width="120" height="60" rx="6" fill="#F9FAFB" stroke="#E8E6E3" stroke-width="1"/>
+    <rect x="28" y="116" width="70" height="5" rx="1.5" fill="#2D2A26" opacity="0.15"/>
+    <rect x="28" y="126" width="100" height="4" rx="1" fill="#D1D5DB" opacity="0.5"/>
+    <rect x="28" y="134" width="90" height="4" rx="1" fill="#D1D5DB" opacity="0.5"/>
+    <rect x="28" y="142" width="60" height="4" rx="1" fill="#D1D5DB" opacity="0.5"/>
+    <rect x="28" y="150" width="80" height="4" rx="1" fill="#2FB872" opacity="0.3"/>
+    <!-- Typing cursor -->
+    <rect x="110" y="150" width="2" height="10" rx="1" fill="#2FB872" opacity="0.8"/>
+  </g>
+
+  <!-- AI Agent 3: Builder bot -->
+  <g transform="translate(420, 120)">
+    <rect width="160" height="180" rx="12" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1.5"/>
+    <!-- Agent avatar -->
+    <circle cx="80" cy="40" r="22" fill="#E8F8F0" stroke="#2FB872" stroke-width="2"/>
+    <circle cx="74" cy="36" r="3" fill="#2D2A26"/>
+    <circle cx="86" cy="36" r="3" fill="#2D2A26"/>
+    <path d="M72 44 Q80 52 88 44" stroke="#2D2A26" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+    <line x1="80" y1="18" x2="80" y2="8" stroke="#2FB872" stroke-width="1.5"/>
+    <circle cx="80" cy="6" r="3" fill="#2FB872"/>
+    <!-- Progress bar -->
+    <rect x="16" y="72" width="128" height="6" rx="3" fill="#E8F8F0"/>
+    <rect x="16" y="72" width="48" height="6" rx="3" fill="#2FB872" opacity="0.6"/>
+    <text x="80" y="97" text-anchor="middle" font-size="10" font-family="system-ui,sans-serif" fill="#4A4540" font-weight="500">Data Analysis</text>
+    <!-- Chart -->
+    <g transform="translate(20, 108)">
+      <rect width="120" height="60" rx="6" fill="#F9FAFB" stroke="#E8E6E3" stroke-width="1"/>
+      <rect x="14" y="40" width="14" height="12" rx="2" fill="#B8EDCF"/>
+      <rect x="34" y="28" width="14" height="24" rx="2" fill="#52C98E"/>
+      <rect x="54" y="18" width="14" height="34" rx="2" fill="#2FB872"/>
+      <rect x="74" y="10" width="14" height="42" rx="2" fill="#28A366"/>
+      <rect x="94" y="22" width="14" height="30" rx="2" fill="#2FB872"/>
+    </g>
+  </g>
+
+  <!-- Growth arrow -->
+  <g transform="translate(60, 330)">
+    <rect width="520" height="60" rx="12" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1.5"/>
+    <!-- Growth curve -->
+    <path d="M30 50 Q100 48 180 42 Q260 36 340 28 Q420 18 500 12" stroke="#2FB872" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <!-- Dot markers on curve -->
+    <circle cx="30" cy="50" r="4" fill="#B8EDCF" stroke="#2FB872" stroke-width="1.5"/>
+    <circle cx="180" cy="42" r="4" fill="#B8EDCF" stroke="#2FB872" stroke-width="1.5"/>
+    <circle cx="340" cy="28" r="4" fill="#52C98E" stroke="#2FB872" stroke-width="1.5"/>
+    <circle cx="500" cy="12" r="5" fill="#2FB872" stroke="#1F8A56" stroke-width="1.5"/>
+    <!-- Labels -->
+    <text x="30" y="58" font-size="8" font-family="system-ui,sans-serif" fill="#4A4540" font-weight="500" text-anchor="middle" dy="8">Week 1</text>
+    <text x="180" y="50" font-size="8" font-family="system-ui,sans-serif" fill="#4A4540" font-weight="500" text-anchor="middle" dy="8">Week 2</text>
+    <text x="340" y="36" font-size="8" font-family="system-ui,sans-serif" fill="#4A4540" font-weight="500" text-anchor="middle" dy="8">Week 4</text>
+    <text x="500" y="18" font-size="8" font-family="system-ui,sans-serif" fill="#1F8A56" font-weight="600" text-anchor="middle" dy="-6">Sharper</text>
+  </g>
+
+  <!-- Bottom label -->
+  <text x="320" y="430" text-anchor="middle" font-size="13" font-family="system-ui,sans-serif" fill="#2FB872" font-weight="700" opacity="0.6">They learn. They grow. Every week.</text>
+
+  <!-- Sparkles -->
+  <path d="M540 100 L543 108 L552 110 L543 112 L540 120 L537 112 L528 110 L537 108Z" fill="#2FB872" opacity="0.3"/>
+  <path d="M50 380 L52 385 L58 387 L52 389 L50 394 L48 389 L42 387 L48 385Z" fill="#52C98E" opacity="0.25"/>
+  <path d="M595 350 L597 355 L603 357 L597 359 L595 364 L593 359 L587 357 L593 355Z" fill="#2FB872" opacity="0.2"/>
+</svg>

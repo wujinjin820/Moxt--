@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" fill="none">
+  <rect width="640" height="480" fill="#FAF9F6"/>
+
+  <!-- Subtle background grid -->
+  <g opacity="0.06">
+    <line x1="0" y1="120" x2="640" y2="120" stroke="#2D2A26" stroke-width="0.5"/>
+    <line x1="0" y1="240" x2="640" y2="240" stroke="#2D2A26" stroke-width="0.5"/>
+    <line x1="0" y1="360" x2="640" y2="360" stroke="#2D2A26" stroke-width="0.5"/>
+    <line x1="160" y1="0" x2="160" y2="480" stroke="#2D2A26" stroke-width="0.5"/>
+    <line x1="320" y1="0" x2="320" y2="480" stroke="#2D2A26" stroke-width="0.5"/>
+    <line x1="480" y1="0" x2="480" y2="480" stroke="#2D2A26" stroke-width="0.5"/>
+  </g>
+
+  <!-- Glow behind center -->
+  <circle cx="320" cy="280" r="100" fill="#2FB872" opacity="0.06"/>
+  <circle cx="320" cy="280" r="60" fill="#2FB872" opacity="0.08"/>
+
+  <!-- Source documents (top row) -->
+  <!-- Doc 1: Business Plan -->
+  <g transform="translate(80, 40)">
+    <rect width="100" height="130" rx="8" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1.5"/>
+    <rect x="12" y="12" width="76" height="8" rx="2" fill="#E8E6E3"/>
+    <rect x="12" y="28" width="60" height="5" rx="1.5" fill="#F3F4F6"/>
+    <rect x="12" y="38" width="72" height="5" rx="1.5" fill="#F3F4F6"/>
+    <rect x="12" y="48" width="50" height="5" rx="1.5" fill="#F3F4F6"/>
+    <rect x="12" y="64" width="76" height="40" rx="4" fill="#F2FBF6" stroke="#B8EDCF" stroke-width="1"/>
+    <rect x="20" y="72" width="30" height="24" rx="2" fill="#B8EDCF"/>
+    <rect x="56" y="72" width="24" height="4" rx="1" fill="#D1D5DB"/>
+    <rect x="56" y="80" width="20" height="4" rx="1" fill="#D1D5DB"/>
+    <rect x="56" y="88" width="16" height="4" rx="1" fill="#D1D5DB"/>
+    <text x="50" y="122" text-anchor="middle" font-size="9" font-family="system-ui,sans-serif" fill="#4A4540" font-weight="500">Docs</text>
+  </g>
+
+  <!-- Doc 2: Code -->
+  <g transform="translate(230, 28)">
+    <rect width="100" height="130" rx="8" fill="#1E1E2E" stroke="#3B3B50" stroke-width="1.5"/>
+    <circle cx="16" cy="16" r="4" fill="#FF6B6B" opacity="0.8"/>
+    <circle cx="28" cy="16" r="4" fill="#FFD93D" opacity="0.8"/>
+    <circle cx="40" cy="16" r="4" fill="#6BCB77" opacity="0.8"/>
+    <rect x="12" y="30" width="40" height="4" rx="1" fill="#7C7CFF" opacity="0.6"/>
+    <rect x="12" y="40" width="60" height="4" rx="1" fill="#D1D5DB" opacity="0.4"/>
+    <rect x="20" y="50" width="50" height="4" rx="1" fill="#2FB872" opacity="0.6"/>
+    <rect x="20" y="60" width="36" height="4" rx="1" fill="#D1D5DB" opacity="0.4"/>
+    <rect x="12" y="70" width="44" height="4" rx="1" fill="#7C7CFF" opacity="0.6"/>
+    <rect x="20" y="80" width="55" height="4" rx="1" fill="#FFD93D" opacity="0.4"/>
+    <rect x="20" y="90" width="40" height="4" rx="1" fill="#D1D5DB" opacity="0.4"/>
+    <rect x="12" y="100" width="30" height="4" rx="1" fill="#2FB872" opacity="0.5"/>
+    <text x="50" y="122" text-anchor="middle" font-size="9" font-family="system-ui,sans-serif" fill="#999" font-weight="500">Code</text>
+  </g>
+
+  <!-- Doc 3: Spreadsheet -->
+  <g transform="translate(380, 40)">
+    <rect width="100" height="130" rx="8" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1.5"/>
+    <rect x="0" y="0" width="100" height="26" rx="8" fill="#0F9D58" opacity="0.12"/>
+    <rect x="12" y="8" width="40" height="6" rx="1.5" fill="#0F9D58" opacity="0.5"/>
+    <line x1="12" y1="34" x2="88" y2="34" stroke="#E8E6E3" stroke-width="0.8"/>
+    <line x1="12" y1="50" x2="88" y2="50" stroke="#E8E6E3" stroke-width="0.8"/>
+    <line x1="12" y1="66" x2="88" y2="66" stroke="#E8E6E3" stroke-width="0.8"/>
+    <line x1="12" y1="82" x2="88" y2="82" stroke="#E8E6E3" stroke-width="0.8"/>
+    <line x1="12" y1="98" x2="88" y2="98" stroke="#E8E6E3" stroke-width="0.8"/>
+    <line x1="40" y1="28" x2="40" y2="105" stroke="#E8E6E3" stroke-width="0.8"/>
+    <line x1="64" y1="28" x2="64" y2="105" stroke="#E8E6E3" stroke-width="0.8"/>
+    <rect x="14" y="36" width="22" height="10" rx="2" fill="#F3F4F6"/>
+    <rect x="42" y="36" width="18" height="10" rx="2" fill="#E8F8F0"/>
+    <rect x="66" y="36" width="18" height="10" rx="2" fill="#F3F4F6"/>
+    <rect x="14" y="52" width="22" height="10" rx="2" fill="#F3F4F6"/>
+    <rect x="42" y="52" width="18" height="10" rx="2" fill="#F3F4F6"/>
+    <rect x="66" y="52" width="18" height="10" rx="2" fill="#E8F8F0"/>
+    <rect x="14" y="68" width="22" height="10" rx="2" fill="#E8F8F0"/>
+    <rect x="42" y="68" width="18" height="10" rx="2" fill="#F3F4F6"/>
+    <rect x="66" y="68" width="18" height="10" rx="2" fill="#F3F4F6"/>
+    <text x="50" y="122" text-anchor="middle" font-size="9" font-family="system-ui,sans-serif" fill="#4A4540" font-weight="500">Data</text>
+  </g>
+
+  <!-- Doc 4: Brand Guide -->
+  <g transform="translate(530, 50)">
+    <rect width="80" height="110" rx="8" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1.5"/>
+    <circle cx="40" cy="40" r="18" fill="#2FB872" opacity="0.15"/>
+    <circle cx="40" cy="40" r="10" fill="#2FB872" opacity="0.3"/>
+    <rect x="12" y="68" width="56" height="5" rx="1.5" fill="#F3F4F6"/>
+    <rect x="12" y="78" width="40" height="5" rx="1.5" fill="#F3F4F6"/>
+    <rect x="12" y="88" width="48" height="5" rx="1.5" fill="#F3F4F6"/>
+    <text x="40" y="105" text-anchor="middle" font-size="8" font-family="system-ui,sans-serif" fill="#4A4540" font-weight="500">Brand</text>
+  </g>
+
+  <!-- Doc 5: Meeting Notes -->
+  <g transform="translate(20, 100)">
+    <rect width="80" height="100" rx="8" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1.5"/>
+    <circle cx="22" cy="20" r="6" fill="#FFD93D" opacity="0.5"/>
+    <rect x="34" y="16" width="34" height="5" rx="1.5" fill="#E8E6E3"/>
+    <rect x="14" y="34" width="52" height="4" rx="1" fill="#F3F4F6"/>
+    <rect x="14" y="44" width="44" height="4" rx="1" fill="#F3F4F6"/>
+    <rect x="14" y="54" width="50" height="4" rx="1" fill="#F3F4F6"/>
+    <rect x="14" y="64" width="36" height="4" rx="1" fill="#F3F4F6"/>
+    <text x="40" y="88" text-anchor="middle" font-size="8" font-family="system-ui,sans-serif" fill="#4A4540" font-weight="500">Notes</text>
+  </g>
+
+  <!-- Flow lines from docs to center brain -->
+  <path d="M130 170 Q200 210 280 260" stroke="#2FB872" stroke-width="2" stroke-dasharray="6 4" opacity="0.4" fill="none"/>
+  <path d="M280 158 Q300 210 310 250" stroke="#2FB872" stroke-width="2" stroke-dasharray="6 4" opacity="0.4" fill="none"/>
+  <path d="M430 170 Q380 210 350 260" stroke="#2FB872" stroke-width="2" stroke-dasharray="6 4" opacity="0.4" fill="none"/>
+  <path d="M570 160 Q480 210 360 260" stroke="#2FB872" stroke-width="2" stroke-dasharray="6 4" opacity="0.35" fill="none"/>
+  <path d="M60 200 Q160 230 270 265" stroke="#2FB872" stroke-width="2" stroke-dasharray="6 4" opacity="0.35" fill="none"/>
+
+  <!-- Central AI brain -->
+  <g transform="translate(320, 280)">
+    <!-- Outer ring -->
+    <circle r="52" fill="#E8F8F0" stroke="#2FB872" stroke-width="2.5"/>
+    <!-- Inner brain shape -->
+    <path d="M-20 -10 Q-22 -25 -10 -30 Q0 -35 10 -28 Q18 -22 22 -30 Q28 -20 20 -10 Q25 0 20 10 Q15 20 5 22 Q-5 24 -15 18 Q-25 12 -22 0 Q-24 -5 -20 -10Z" fill="#B8EDCF" stroke="#28A366" stroke-width="1.5"/>
+    <!-- Neural dots -->
+    <circle cx="-8" cy="-12" r="3" fill="#2FB872"/>
+    <circle cx="8" cy="-18" r="2.5" fill="#2FB872"/>
+    <circle cx="14" cy="-2" r="3" fill="#2FB872"/>
+    <circle cx="-4" cy="8" r="2.5" fill="#2FB872"/>
+    <circle cx="6" cy="12" r="2" fill="#2FB872"/>
+    <!-- Neural connections -->
+    <line x1="-8" y1="-12" x2="8" y2="-18" stroke="#1F8A56" stroke-width="1" opacity="0.5"/>
+    <line x1="8" y1="-18" x2="14" y2="-2" stroke="#1F8A56" stroke-width="1" opacity="0.5"/>
+    <line x1="14" y1="-2" x2="6" y2="12" stroke="#1F8A56" stroke-width="1" opacity="0.5"/>
+    <line x1="-8" y1="-12" x2="-4" y2="8" stroke="#1F8A56" stroke-width="1" opacity="0.5"/>
+  </g>
+
+  <!-- Output rays -->
+  <path d="M320 340 L280 400" stroke="#2FB872" stroke-width="2" opacity="0.3"/>
+  <path d="M320 340 L320 410" stroke="#2FB872" stroke-width="2" opacity="0.3"/>
+  <path d="M320 340 L360 400" stroke="#2FB872" stroke-width="2" opacity="0.3"/>
+
+  <!-- Output cards -->
+  <g transform="translate(240, 400)">
+    <rect width="60" height="44" rx="6" fill="#FFFFFF" stroke="#2FB872" stroke-width="1.5"/>
+    <path d="M12 416 l6 6 12-12" stroke="#2FB872" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" transform="translate(-228, -400)"/>
+    <rect x="8" y="24" width="44" height="4" rx="1" fill="#E8F8F0"/>
+    <rect x="8" y="32" width="32" height="4" rx="1" fill="#E8F8F0"/>
+  </g>
+  <g transform="translate(340, 400)">
+    <rect width="60" height="44" rx="6" fill="#FFFFFF" stroke="#2FB872" stroke-width="1.5"/>
+    <path d="M12 416 l6 6 12-12" stroke="#2FB872" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" transform="translate(-328, -400)"/>
+    <rect x="8" y="24" width="44" height="4" rx="1" fill="#E8F8F0"/>
+    <rect x="8" y="32" width="32" height="4" rx="1" fill="#E8F8F0"/>
+  </g>
+
+  <!-- Sparkles -->
+  <path d="M160 240 L163 248 L172 250 L163 252 L160 260 L157 252 L148 250 L157 248Z" fill="#2FB872" opacity="0.35"/>
+  <path d="M480 230 L482 236 L488 238 L482 240 L480 246 L478 240 L472 238 L478 236Z" fill="#52C98E" opacity="0.3"/>
+  <path d="M540 300 L542 305 L548 307 L542 309 L540 314 L538 309 L532 307 L538 305Z" fill="#2FB872" opacity="0.25"/>
+  <path d="M100 310 L102 315 L108 317 L102 319 L100 324 L98 319 L92 317 L98 315Z" fill="#52C98E" opacity="0.25"/>
+
+  <!-- Label -->
+  <text x="320" y="465" text-anchor="middle" font-size="12" font-family="system-ui,sans-serif" fill="#4A4540" font-weight="600" letter-spacing="0.08em" opacity="0.5">ALL CONTEXT → ONE AI BRAIN</text>
+</svg>
